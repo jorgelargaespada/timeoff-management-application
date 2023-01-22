@@ -4,6 +4,7 @@
 Web application for managing employee absences.
 
 [![Build Status](http://34.123.237.22:8080/buildStatus/icon?job=timeoff-management-application%2Fmaster)](http://34.123.237.22:8080/job/timeoff-management-application/job/master/)
+<a href='http://34.123.237.22:8080/job/timeoff-management-application/job/master/'><img src='http://34.123.237.22:8080/buildStatus/icon?job=timeoff-management-application%2Fmaster'></a>
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=jorgelargaespada_timeoff-management-application&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=jorgelargaespada_timeoff-management-application)
 
