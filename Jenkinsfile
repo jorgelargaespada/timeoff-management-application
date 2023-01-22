@@ -47,6 +47,8 @@ pipeline {
                 steps{
                     sh 'sleep 20'
                     input message: 'Delivery via http://34.123.237.22:5001 ,The App is OK? (Click "Proceed" to continue)'
+                    sh 'docker stop time-app'
+                    sh 'docker image prune -a -f'
             }
         }
         
@@ -62,8 +64,6 @@ pipeline {
         }
         success {
 		slackSend (channel: "timeoff-management-application", message: "Build succeeded - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)")
-        sh 'docker stop time-app'
-        sh 'docker image prune -a -f'
         }
         aborted {
         slackSend (channel: "timeoff-management-application", message: "Build aborted - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)")
